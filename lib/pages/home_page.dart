@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pesosight/pages/info_page.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget { 
   const HomePage({super.key});
 
   @override
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -41,38 +42,53 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
 
-              GestureDetector(
-                onTap: () {
+                GestureDetector(
+                  onTap: () {
                   // Add functionality here
+                Navigator.push(
+                context,
+                  MaterialPageRoute(builder: (context) => const InfoPage()),
+                  );
                 },
-                child: Container(
-                  height: 55,
-                  width: 55,
-                  decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.groups_rounded,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      Text(
-                        'About Us',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 9,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                    ],
-                  ),
+                child: const Icon(
+                  Icons.info,
+                  color: Colors.blue,
+                  size: 50,
                 ),
               ),
+
+              // GestureDetector(
+              //   onTap: () {
+              //     // Add functionality here
+              //   },
+              //   child: Container(
+              //     height: 55,
+              //     width: 55,
+              //     decoration: BoxDecoration(
+              //       color: Colors.blueAccent,
+              //       borderRadius: BorderRadius.circular(30.0),
+              //     ),
+              //     child: Column(
+              //       mainAxisSize: MainAxisSize.min,
+              //       mainAxisAlignment: MainAxisAlignment.center,
+              //       children: [
+              //         Icon(
+              //           Icons.groups_rounded,
+              //           color: Colors.white,
+              //           size: 35,
+              //         ),
+              //         Text(
+              //           'About Us',
+              //           style: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 9,
+              //             fontWeight: FontWeight.normal,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
 
                   
                   // Container(
@@ -121,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(

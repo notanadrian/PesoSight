@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pesosight/pages/home_page.dart';
-import 'package:pesosight/pages/info_page.dart';
 
 void main() {
   runApp(const MyApp());
